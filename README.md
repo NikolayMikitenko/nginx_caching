@@ -8,8 +8,9 @@ Run docker container from main project folder
 `docker-compose up`
 
 ## Use it 
-Request image first time :
+### 1. Request image first time :
 `curl -D - localhost/images/example.png --output temp.png` 
+ 
 In output we get *X-Cache-Status: MISS* and file size *4477k*:
 ```
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -29,4 +30,6 @@ X-Cache-Status: MISS
 100  4585  100  4585    0     0  4477k      0 --:--:-- --:--:-- --:--:-- 4477k
 ```
  
+### 2. Request image second time :
+`curl -D - localhost/images/example.png --output temp.png` 
  
