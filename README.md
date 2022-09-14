@@ -51,11 +51,11 @@ X-Cache-Status: MISS
 100  4585  100  4585    0     0  4477k      0 --:--:-- --:--:-- --:--:-- 4477k
 ```
  
-### 3. Request image third time: 
+### 3. Request image third time and get it from cache: 
 `curl -D - localhost/images/example.png --output temp.png` 
-``` 
-In output we get *X-Cache-Status: HIT* and file size *4477k*:
 
+In output we get *X-Cache-Status: HIT* and file size *4477k*:
+``` 
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0HTTP/1.1 200 OK
